@@ -1,0 +1,1 @@
+sudo apt-get install hackrf libhackrf-dev libhackrf0 soapysdr-module-hackrf soapysdr0.6-module-hackrf -y
