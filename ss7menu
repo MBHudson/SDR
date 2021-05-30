@@ -1,0 +1,3 @@
+cd
+cd SigPloit/ 
+sudo python test.py

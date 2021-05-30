@@ -1,0 +1,3 @@
+cd
+cd /usr/src/dump1090
+./dump1090 --interactive --net --net-beast --net-ro-port 31001

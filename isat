@@ -1,0 +1,24 @@
+clear
+echo " iSAT v1.0 "
+echo " M.B. Hudson 2021"
+sleep 3
+#export PATH=$PATH:/usr/src/iridium-toolkit
+cd
+cd /usr
+cd src
+cd gr-iridium
+cd examples
+#sudo nano hackrf.conf
+iridium-extractor -D 4 hackrf.conf | grep "A:OK" > /home/argus/output.bits -h
+#iridium-extractor -D 4 rtl-sdr.conf | grep "A:OK" > /home/argus/output.bits -h
+cd
+export PATH=$PATH:/usr/src/iridium-toolkit
+cd /usr/src/osmo-ir77/codec
+sudo cp ir77_ambe_decode /usr/src/iridium-toolkit/
+cd
+cd /usr
+cd src
+cd iridium-toolkit
+python2 iridium-parser.py -p /home/argus/output.bits > /home/argus/output.parsed
+./stats-voc.py /home/argus/output.parsed
+

@@ -1,0 +1,4 @@
+cd
+cd ~/SigPloit/ss7/attacks/interception/ul
+clear
+sudo java -jar UpdateLocation.jar
